@@ -16,7 +16,7 @@ def verify_unit_test_file(csv_file):
     df = pd.read_csv(csv_file)
     rowCount, colCount = df.shape
     if (colCount != 11) or (rowCount != 261):
-        st.warning('File should have 10 columns and 261 rows.')
+        st.warning('File should have 11 columns and 261 data rows and one header row.')
         return False
     
     firstDT = df.iloc[0, 0]
